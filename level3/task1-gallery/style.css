@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 30px 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* ---------- Gallery ---------- */
+  .gallery {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Lightbox: hidden by default */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  /* :target = URL-la #img1 irundha andha element show aagum */
+  .lightbox:target {
+    display: flex;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* ---------- Slideshow ---------- */
+  .slideshow {
+    position: relative;
+    max-width: 900px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 12s infinite;
+  }
+  
+  /* Ovvoru slide 4 seconds kazhichu varum */
+  .s2 { animation-delay: 4s; }
+  .s3 { animation-delay: 8s; }
+  
+  @keyframes fade {
+    0%   { opacity: 0; }
+    8%   { opacity: 1; }
+    33%  { opacity: 1; }
+    41%  { opacity: 0; }
+    100% { opacity: 0; }
+  }
+  
+  @media (max-width: 600px) {
+    .slideshow {
+      height: 240px;
+    }
+  }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Idhu illana responsive work aagadhu -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Page | Cognifyz Level 2 Task 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#home" class="logo">MyWebsite</a>
+
+      <!-- Hamburger: checkbox + label trick (no JavaScript) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <h1>Responsive Web Design</h1>
+      <p>Indha page desktop, tablet, mobile ellaa screen-layum adjust aagum.</p>
+      <a href="#services" class="btn">Explore</a>
+    </section>
+
+    <section class="section" id="services">
+      <h2>Our Services</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Web Design</h3>
+          <p>Clean and modern layouts that look good on every device.</p>
+        </article>
+        <article class="card">
+          <h3>Front-end Development</h3>
+          <p>HTML, CSS and JavaScript to build fast, interactive pages.</p>
+        </article>
+        <article class="card">
+          <h3>Responsive Layouts</h3>
+          <p>Media queries make the same page fit phone, tablet and desktop.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>About</h2>
+      <p>Replace this text with a short note about you or your project.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <p>Contact: yourname@example.com</p>
+  </footer>
+
+</body>
+</html>
