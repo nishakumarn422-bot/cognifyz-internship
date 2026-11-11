@@ -48,7 +48,7 @@
     z-index: 100;
   }
   
-  /* :target = URL-la #img1 irundha andha element show aagum */
+  /* :target shows the element whose id matches the URL hash, e.g. */
   .lightbox:target {
     display: flex;
   }
@@ -88,7 +88,7 @@
     animation: fade 12s infinite;
   }
   
-  /* Ovvoru slide 4 seconds kazhichu varum */
+  /* Each slide appears 4 seconds after the previous one */
   .s2 { animation-delay: 4s; }
   .s3 { animation-delay: 8s; }
   
